@@ -180,12 +180,13 @@ h2 {
     gap: 10px;
     flex-wrap: wrap;
     pointer-events: none; /* Prevents hover bubbling up */
+    line-height: 2;
 }
 
 .tag {
     background-color: rgba(35, 53, 84, 0.9);
     color: #64ffda;
-    padding: 6px 14px;
+    padding: 5px 14px;
     border-radius: 9999px;
     font-size: 0.8rem;
     font-weight: 500;
@@ -269,7 +270,7 @@ h2 {
     display: inline-block;
     color: #64ffda;
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .archive-title {
@@ -500,4 +501,28 @@ html {
     section {
         scroll-margin-top: 70px; /* Adjust to your mobile nav height */
     }
+}
+.mobile-social-icons {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 1.2rem;
+        padding: 0.75rem 0;
+        background-color: #0a192f;
+    }
+
+        .mobile-social-icons img {
+            width: 24px;
+            height: 24px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+            .mobile-social-icons img:hover {
+                opacity: 1;
+            }
 }

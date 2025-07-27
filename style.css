@@ -322,3 +322,45 @@ h2 {
 html {
     scroll-behavior: smooth;
 }
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #0a192f;
+        display: flex;
+        justify-content: space-around;
+        padding: 0.75rem;
+        border-bottom: 1px solid #233554;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+        .mobile-nav a {
+            color: #64ffda;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+            .mobile-nav a:hover {
+                text-decoration: underline;
+            }
+}
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+        padding: 1.5rem;
+        width: 100%;
+    }
+}

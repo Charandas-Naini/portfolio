@@ -55,6 +55,22 @@ document.querySelectorAll(".project-card-archive").forEach(card => {
             linkEl.style.display = "none";
         }
 
+        // Handle Skills
+        const skillsContainer = document.getElementById("modalSkills");
+        skillsContainer.innerHTML = ""; // clear previous skills
+        if (card.dataset.skills && card.dataset.skills.trim() !== "") {
+            let skillsArray = card.dataset.skills.split(",");
+            skillsArray.forEach(skill => {
+                let tag = document.createElement("span");
+                tag.textContent = skill.trim();
+                skillsContainer.appendChild(tag);
+            });
+            skillsContainer.style.display = "flex";
+        } else {
+            skillsContainer.style.display = "none";
+        }
+
+
         // Show modal
         document.getElementById("projectModal").style.display = "flex";
     });

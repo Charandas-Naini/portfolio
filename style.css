@@ -681,3 +681,20 @@ html {
     .carousel-btn.next {
         right: 10px;
     }
+
+.skills-list {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+    .skills-list span {
+        background: #233554;
+        color: #64ffda;
+        padding: 4px 10px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+    }
+
